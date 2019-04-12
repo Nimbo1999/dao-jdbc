@@ -66,6 +66,9 @@ public class Program {
 		System.out.println("\n=== Teste 3: Department Update ===");
 		depInsert.setName("Developer");
 		departmentDao.update(depInsert);
+		
+		System.out.println("\n=== Teste 4: Department Delete ===");
+		departmentDao.deleteById(13);
 	}
 
 }
