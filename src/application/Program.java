@@ -4,6 +4,7 @@ import java.util.Date;
 import java.util.List;
 
 import model.dao.DaoFactory;
+import model.dao.DepartmentDao;
 import model.dao.SellerDao;
 import model.entities.Department;
 import model.entities.Seller;
@@ -11,7 +12,7 @@ import model.entities.Seller;
 public class Program {
 
 	public static void main(String[] args) {
-		SellerDao sellerDao = DaoFactory.createSellerDao();
+		/*SellerDao sellerDao = DaoFactory.createSellerDao();
 		
 		System.out.println("=== Test 1: seller findById ===");
 		Seller seller = sellerDao.findById(3);
@@ -32,7 +33,7 @@ public class Program {
 			System.out.println(obj);
 		}
 		
-		/*System.out.println("\n=== Test 4: seller Insert ===");
+		System.out.println("\n=== Test 4: seller Insert ===");
 		Seller newSeller = new Seller(null, "greg", "greg@gmail.com", new Date(), 4000.0, department);
 		sellerDao.insert(newSeller);
 		System.out.println("Inserted new seller with id = "+ newSeller.getId() +"!!");
@@ -46,6 +47,12 @@ public class Program {
 		System.out.println("\n=== Test 6: seller Delete ===");
 		sellerDao.deleteById(11);
 		System.out.println("Deleted!");*/
+		
+		DepartmentDao departmentDao = DaoFactory.createDepartmentDao();
+		System.out.println("=== Teste 1: Department findById ===");
+		Department department = departmentDao.findById(1);
+		
+		System.out.println(department);
 		
 		
 	}
