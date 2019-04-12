@@ -58,10 +58,14 @@ public class Program {
 			System.out.println(dep);
 		}
 		
-		System.out.println("\n=== Teste 2: Department findAll ===");
+		System.out.println("\n=== Teste 2: Department Insert ===");
 		Department depInsert = new Department(null, "Investigation");
 		departmentDao.insert(depInsert);
-		System.out.println("Done!");		
+		System.out.println("Done!");	
+		
+		System.out.println("\n=== Teste 3: Department Update ===");
+		depInsert.setName("Developer");
+		departmentDao.update(depInsert);
 	}
 
 }
